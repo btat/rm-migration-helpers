@@ -55,10 +55,9 @@ CSV.foreach(ARGV[0], headers: true, col_sep: ", ") do |row|
   elsif !File.file?("#{pwd}/#{new_path}.md")
     next
   else
-    c123+=abs_to_rel(old_path, new_path)
+    abs_to_rel(old_path, new_path)
   end
 end
-puts "total: #{c123}"
 remove_empty_dirs
 
 BEGIN {
@@ -99,8 +98,6 @@ BEGIN {
     old_path_full = "#{pwd}/#{old_path}"
     new_path_full = "#{pwd}/#{new_path}"
 
-  count = 0
-    puts "### [START] old: #{old_path}, new: #{new_path}"
     files_with_link = %x[ grep -rl --include \\*.md "(#{old_path}" ]
     if !files_with_link.empty?
       files_with_link.split.each do |file|
@@ -113,12 +110,8 @@ BEGIN {
         %x[ sed -i "s|(#{old_path}/)|(#{rel_link})|g" #{file} ]
         %x[ sed -i "s|(#{old_path}#|(#{rel_link}#|g" #{file} ]
         %x[ sed -i "s|(#{old_path}/#|(#{rel_link}#|g" #{file} ]
-count+=1
-        puts "+++ file: #{file}, rel_link: #{rel_link} "
       end
     end
-    puts "### [END]"
-    return count
   end
 
   # As files/folders are moved to their new locations, directories from old structure wlll
