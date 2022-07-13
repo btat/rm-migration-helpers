@@ -412,9 +412,6 @@ how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubern
 how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-a-digitalocean-cluster, cluster-provisioning/rke-clusters/node-pools/digital-ocean
 how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/create-an-amazon-ec2-cluster, cluster-provisioning/rke-clusters/node-pools/ec2
 how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-a-vm-template, cluster-provisioning/rke-clusters/node-pools/vsphere/creating-a-vm-template
-getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-aks, installation/install-rancher-on-k8s/aks
-getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-amazon-eks, installation/install-rancher-on-k8s/amazon-eks
-getting-started/installation-and-upgrade/install-upgrade-on-a-kubernetes-cluster/rancher-on-gke, installation/install-rancher-on-k8s/gke
 getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/docker-install-commands, installation/other-installation-methods/air-gap/install-rancher/docker-install-commands
 getting-started/installation-and-upgrade/resources/local-system-charts, installation/resources/local-system-charts
 how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/customize-grafana-dashboards, monitoring-alerting/prometheus-federator/guides/customizing-grafana

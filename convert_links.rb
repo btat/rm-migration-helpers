@@ -5,20 +5,21 @@ prep_links
 CSV.foreach(ARGV[0], headers: true, col_sep: ", ") do |row|
   new_path = row["new_path"]
   old_path = row["old_path"]
+  old_path_split = old_path.split("/")
+  new_path_split = new_path.split("/")
+  old_path_parent = old_path_split.last
+  new_path_parent = new_path_split.last
 
   if !Dir.exist?(old_path)
     puts "[SKIP] Hugo: '#{old_path}' not found. Divio: '#{new_path}'"
+    create_placeholder_file(new_path_split)
     next
   elsif !Dir["#{old_path}/*.md"].any?
     puts "[SKIP] Hugo file already moved. Multiple reference to same Hugo file. Hugo: '#{old_path}', Divio: '#{new_path}'"
+    create_placeholder_file(new_path_split)
     next
   # if new path and old path are the same, no rename and no move
   else
-    old_path_split = old_path.split("/")
-    new_path_split = new_path.split("/")
-    old_path_parent = old_path_split.last
-    new_path_parent = new_path_split.last
-
     # file name unchanged
     # old_path = "user-settings/api-keys" # api-keys is a dir containing a .md file
     # new_path = "reference-guides/user-settings/api-keys" # api-keys is a .md file
@@ -119,4 +120,12 @@ BEGIN {
   def remove_empty_dirs
     %x[ find . -depth -type d -empty -delete ]
   end
+
+  def create_placeholder_file(path)
+    if path.length > 1
+      %x[ mkdir -p #{path[0..-2].join("/")}]
+    end
+    %x[ printf '<!-- PLACEHOLDER -->' > #{path}.md]
+  end
 }
+
