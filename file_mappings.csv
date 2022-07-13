@@ -379,7 +379,6 @@ explanations/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring
 explanations/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards, monitoring-alerting/dashboards
 explanations/integrations-in-rancher/monitoring-and-alerting/windows-support, monitoring-alerting/windows-clusters
 explanations/integrations-in-rancher/monitoring-and-alerting/promql-expressions, monitoring-alerting/expression
-explanations/integrations-in-rancher/monitoring-and-alerting/prometheus-federator, monitoring-alerting/prometheus-federator
 explanations/integrations-in-rancher/neuvector, neuvector-integration
 explanations/integrations-in-rancher/opa-gatekeeper, opa-gatekeper
 faq, faq
@@ -413,6 +412,8 @@ how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubern
 how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-new-nodes-in-an-infra-provider/vsphere/create-a-vm-template, cluster-provisioning/rke-clusters/node-pools/vsphere/creating-a-vm-template
 getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/docker-install-commands, installation/other-installation-methods/air-gap/install-rancher/docker-install-commands
 getting-started/installation-and-upgrade/resources/local-system-charts, installation/resources/local-system-charts
+pages-for-subheaders/prometheus-federator, monitoring-alerting/prometheus-federator
+pages-for-subheaders/prometheus-federator-guides, tbd
 how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/customize-grafana-dashboards, monitoring-alerting/prometheus-federator/guides/customizing-grafana
 how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/enable-prometheus-federator, monitoring-alerting/prometheus-federator/guides/enable-prom-fed
 how-to-guides/advanced-user-guides/monitoring-alerting-guides/prometheus-federator-guides/set-up-workloads, monitoring-alerting/prometheus-federator/guides/prom-fed-workloads
