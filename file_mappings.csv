@@ -13,6 +13,7 @@ getting-started/quick-start-guides/deploy-rancher-manager/gcp, quick-start-guide
 getting-started/quick-start-guides/deploy-rancher-manager/hetzner-cloud, quick-start-guide/deployment/hetzner-cloud-qs
 getting-started/quick-start-guides/deploy-rancher-manager/vagrant, quick-start-guide/deployment/quickstart-vagrant
 getting-started/quick-start-guides/deploy-rancher-manager/equinix-metal, quick-start-guide/deployment/equinix-metal-qs
+getting-started/quick-start-guides/deploy-rancher-manager/outscale-qs, quick-start-guide/deployment/outscale-qs
 getting-started/quick-start-guides/deploy-rancher-manager/helm-cli, quick-start-guide/deployment/quickstart-manual-setup
 pages-for-subheaders/deploy-rancher-workloads, quick-start-guide/workload
 getting-started/quick-start-guides/deploy-workloads/workload-ingress, quick-start-guide/workload/quickstart-deploy-workload-ingress
@@ -336,8 +337,6 @@ reference-guides/pipelines/example-repositories, pipelines/example-repos
 reference-guides/pipelines/example-yaml, pipelines/example
 pages-for-subheaders/rancher-security, security
 pages-for-subheaders/rancher-v2.6-hardening-guides, security/hardening-guides
-reference-guides/rancher-security/rancher-v2.6-hardening-guides/hardening-guide-with-cis-v1.6-benchmark, security/hardening-guides/1.6-hardening-2.6
-reference-guides/rancher-security/rancher-v2.6-hardening-guides/self-assessment-guide-with-cis-v1.6-benchmark, security/hardening-guides/1.6-benchmark-2.6
 pages-for-subheaders/selinux-rpm, security/selinux
 reference-guides/rancher-security/selinux-rpm/about-rancher-selinux, security/selinux
 reference-guides/rancher-security/selinux-rpm/about-rke2-selinux, security/selinux
@@ -384,7 +383,7 @@ explanations/integrations-in-rancher/monitoring-and-alerting/prometheus-federato
 explanations/integrations-in-rancher/neuvector, neuvector-integration
 explanations/integrations-in-rancher/opa-gatekeeper, opa-gatekeper
 faq, faq
-faq/deprecated-features-in-v2.5, faq/deprecated-features-25x
+faq/deprecated-features-in-v2.5, faq/deprecated-features
 faq/install-and-configure-kubectl, faq/kubectl
 faq/dockershim, faq/dockershim
 faq/technical-items, faq/technical

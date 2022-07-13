@@ -12,11 +12,20 @@ CSV.foreach(ARGV[0], headers: true, col_sep: ", ") do |row|
 
   if !Dir.exist?(old_path)
     puts "[SKIP] Hugo: '#{old_path}' not found. Divio: '#{new_path}'"
-    create_placeholder_file(new_path_split)
+
+    # create placeholder file
+    if new_path_split.length > 1
+      %x[ mkdir -p #{new_path_split[0..-2].join("/")} ]
+    end
+    %x[ printf '<!-- PLACEHOLDER -->' > #{new_path}.md ]
+
     next
   elsif !Dir["#{old_path}/*.md"].any?
     puts "[SKIP] Hugo file already moved. Multiple reference to same Hugo file. Hugo: '#{old_path}', Divio: '#{new_path}'"
-    create_placeholder_file(new_path_split)
+
+    # create placeholder file
+    %x[ mkdir -p #{new_path_split[0..-2].join("/")} && printf '<!-- PLACEHOLDER -->' > #{new_path}.md ]
+
     next
   # if new path and old path are the same, no rename and no move
   else
@@ -119,13 +128,6 @@ BEGIN {
   # become empty. Any leftover ones have not been included in the current sidebar.js
   def remove_empty_dirs
     %x[ find . -depth -type d -empty -delete ]
-  end
-
-  def create_placeholder_file(path)
-    if path.length > 1
-      %x[ mkdir -p #{path[0..-2].join("/")}]
-    end
-    %x[ printf '<!-- PLACEHOLDER -->' > #{path}.md]
   end
 }
 
