@@ -52,7 +52,6 @@ CSV.foreach(ARGV[0], headers: true, col_sep: ", ") do |row|
   end
 end
 
-c123=0
 pwd = (%x[ pwd ]).chomp
 # Update to relative link for each file that's been moved
 CSV.foreach(ARGV[0], headers: true, col_sep: ", ") do |row|
@@ -76,6 +75,8 @@ BEGIN {
 
     # standardize baseurl
     %x[ find ./ -type f -exec sed -i "s/{{< baseurl >}}/{{<baseurl>}}/g" {} \\; ]
+    %x[ find ./ -type f -exec sed -i "s/{{< baseurl>}}/{{<baseurl>}}/g" {} \\; ]
+    %x[ find ./ -type f -exec sed -i "s/{{<baseurl >}}/{{<baseurl>}}/g" {} \\; ]
 
     # Update RKE links from {{<baseurl}}/rke to https://rancher.com/docs
     %x[ find ./ -type f -exec sed -i 's/{{<baseurl>}}\\/rke/https:\\/\\/rancher\\.com\\/docs\\/rke/g' {} \\; ]
@@ -93,14 +94,22 @@ BEGIN {
     # %x[ find ./ -type f -exec sed -i "s/https\\.rancher\\.com\\/docs\\/rancher\\/.*\\/en\\///g" {} \\; ]
     %x[ find ./ -type f -exec sed -i "s/https\\.rancher\\.com\\/docs\\/rancher\\/#{version}\\/en\\///g" {} \\; ]
 
-    # image links
-    %x[ find ./ -type f -exec sed -i "s/{{<baseurl>}}\\/img\\/rancher/img/g" {} \\; ]
+    # img shortcodes e.g. {{< img "path" "alt text" >}}
+    %x[ find ./ -type f -exec sed -i "s|{{< img \\"|![](|g" {} \\; ]
+    %x[ find ./ -type f -exec sed -i "s|\\" \\".*\\">}}|\\)|g" {} \\; ]
+    %x[ find ./ -type f -exec sed -i "s|\\" \\".*\\" >}}|\\)|g" {} \\; ]
 
-    # grep -Frin '"/rancher'
+    # image links
+    %x[ find ./ -type f -exec sed -i "s/{{<baseurl>}}\\/img\\/rancher\\//\\/img\\//g" {} \\; ]
+    %x[ find ./ -type f -exec sed -i "s/docs\\/img\\/rancher\\//img\\//g" {} \\; ]
+    %x[ find ./ -type f -exec sed -i "s/img\\/rancher\\//img\\//g" {} \\; ]
+
     # installation/requirements/ports/ports.md
     # getting-started/installation-and-upgrade/installation-requirements/port-requirements
     # {{% include file="/rancher/v2.6/en/installation/requirements/ports/common-ports-table" %}}
     %x[ find ./ -type f -exec sed -i 's/"\\/rancher\\/#{version}\\/en\\//"/g' {} \\; ]
+
+
   end
 
   def abs_to_rel(old_path, new_path)
@@ -130,4 +139,9 @@ BEGIN {
     %x[ find . -depth -type d -empty -delete ]
   end
 }
+
+# grep -rE "\((\.||\.\.)/[^)]+"
+def rel_to_abs
+
+end
 
