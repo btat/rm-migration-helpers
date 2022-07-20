@@ -1,5 +1,5 @@
 new_path, old_path
-rancher-manager, .
+rancher-manager, ./
 getting-started, tbd
 pages-for-subheaders/introduction, tbd
 getting-started/introduction/overview, overview

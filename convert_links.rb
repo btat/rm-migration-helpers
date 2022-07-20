@@ -71,7 +71,8 @@ remove_empty_dirs
 
 BEGIN {
   def prep_links
-    version = "v2.6"
+    version = ARGV[1]
+    rel_to_abs
 
     # standardize baseurl
     %x[ find ./ -type f -exec sed -i "s/{{< baseurl >}}/{{<baseurl>}}/g" {} \\; ]
@@ -85,13 +86,9 @@ BEGIN {
     %x[ find ./ -type f -exec sed -i 's/{{<baseurl>}}\\/k3s/https:\\/\\/rancher\\.com\\/docs\\/k3s/g' {} \\; ]
 
     # internal doc links: remove baseurl/rancher/v2.x/en
-    # this version doesn't work if multiple links on the same line
-    # %x[ find ./ -type f -exec sed -i "s/{{<.*baseurl.*\\/en\\///g" {} \\; ]
     %x[ find ./ -type f -exec sed -i "s/{{<baseurl>}}\\/rancher\\/#{version}\\/en\\///g" {} \\; ]
 
     # internal doc links: remove https://rancher.com/docs/rancher/v2.x/en prefix
-    # this version doesn't work if multiple links on the same line
-    # %x[ find ./ -type f -exec sed -i "s/https\\.rancher\\.com\\/docs\\/rancher\\/.*\\/en\\///g" {} \\; ]
     %x[ find ./ -type f -exec sed -i "s/https\\.rancher\\.com\\/docs\\/rancher\\/#{version}\\/en\\///g" {} \\; ]
 
     # img shortcodes e.g. {{< img "path" "alt text" >}}
@@ -107,9 +104,8 @@ BEGIN {
     # installation/requirements/ports/ports.md
     # getting-started/installation-and-upgrade/installation-requirements/port-requirements
     # {{% include file="/rancher/v2.6/en/installation/requirements/ports/common-ports-table" %}}
-    %x[ find ./ -type f -exec sed -i 's/"\\/rancher\\/#{version}\\/en\\//"/g' {} \\; ]
-
-
+    # import ClusterCapabilitiesTable from '/rancher/v2.6/en/shared-files/_cluster-capabilities-table.md';
+    %x[ find ./ -type f -exec sed -i "s/'\\/rancher\\/#{version}\\/en\\//'/g" {} \\; ]
   end
 
   def abs_to_rel(old_path, new_path)
@@ -117,9 +113,9 @@ BEGIN {
     old_path_full = "#{pwd}/#{old_path}"
     new_path_full = "#{pwd}/#{new_path}"
 
-    files_with_link = %x[ grep -rl --include \\*.md "(#{old_path}" ]
+    files_with_link = %x[ grep -rl --include \\*.md "\](#{old_path}" ]
     if !files_with_link.empty?
-      files_with_link.split.each do |file|
+      files_with_link.split.uniq.each do |file|
         file.chomp!
         dirname = file.split("/")[0..-2].join("/")
         rel_link = %x[ realpath --relative-to=#{pwd}/#{dirname} #{pwd}/#{new_path}.md ].chomp
@@ -133,15 +129,36 @@ BEGIN {
     end
   end
 
+  # grep -rE "\((\.||\.\.)/[^)]+"
+  def rel_to_abs
+    # Current directory links (./xyz)
+    files_with_rel_link_current_dir = %x[ grep --include \\*.md -roE "\\(\\./[^)]*)" ]
+    files_with_rel_link_current_dir.split.uniq.each do |result|
+        pwd = (%x[ pwd ]).chomp
+        file = result.split(":").first.strip
+        pattern = result.split(":").last.tr("()", "")
+        realpath = %x[ realpath #{pwd}/#{file.split("/")[0..-2].join("/")}/#{pattern} ].chomp
+
+        %x[ sed -i "s|#{pattern}|#{realpath.gsub(pwd,'').sub('/','')}|" #{file} ]
+    end
+
+    # Parent directory links (../xyz)
+    files_with_rel_link = %x[ grep --include \\*.md -roE "\\(\\.\\./[^)]*)" ]
+    files_with_rel_link.split.uniq.each do |result|
+        pwd = (%x[ pwd ]).chomp
+        file = result.split(":").first.strip
+        pattern = result.split(":").last.tr("()", "")
+
+        realpath = %x[ realpath #{pwd}/#{file.split("/")[0..-2].join("/")}/#{pattern} ].chomp
+
+        %x[ sed -i "s|#{pattern}|#{realpath.gsub(pwd,'').sub('/','')}|" #{file} ]
+    end
+  end
+
   # As files/folders are moved to their new locations, directories from old structure wlll
   # become empty. Any leftover ones have not been included in the current sidebar.js
   def remove_empty_dirs
     %x[ find . -depth -type d -empty -delete ]
   end
 }
-
-# grep -rE "\((\.||\.\.)/[^)]+"
-def rel_to_abs
-
-end
 
