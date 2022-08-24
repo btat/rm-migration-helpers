@@ -64,6 +64,15 @@ getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/con
 how-to-guides, tbd
 pages-for-subheaders/new-user-guides, tbd
 pages-for-subheaders/kubernetes-cluster-setup, installation/resources/k8s-tutorials
+how-to-guides/new-user-guides/migrate-from-v1.6-v2.x, v1.6-migration
+how-to-guides/new-user-guides/migrate-from-v1.6-v2.x/kubernetes-introduction, v1.6-migration/kub-intro
+how-to-guides/new-user-guides/migrate-from-v1.6-v2.x/install-and-configure-rancher, v1.6-migration/get-started
+how-to-guides/new-user-guides/migrate-from-v1.6-v2.x/migrate-services, v1.6-migration/run-migration-tool
+how-to-guides/new-user-guides/migrate-from-v1.6-v2.x/expose-services, v1.6-migration/expose-services
+how-to-guides/new-user-guides/migrate-from-v1.6-v2.x/monitor-apps, v1.6-migration/monitor-apps
+how-to-guides/new-user-guides/migrate-from-v1.6-v2.x/schedule-services, v1.6-migration/schedule-workloads
+how-to-guides/new-user-guides/migrate-from-v1.6-v2.x/discover-services, v1.6-migration/discover-services
+how-to-guides/new-user-guides/migrate-from-v1.6-v2.x/load-balancing, v1.6-migration/load-balancing
 how-to-guides/new-user-guides/kubernetes-cluster-setup/high-availability-installs, installation/resources/k8s-tutorials/how-ha-works
 how-to-guides/new-user-guides/kubernetes-cluster-setup/k3s-for-rancher, installation/resources/k8s-tutorials/ha-with-external-db
 how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher, installation/resources/k8s-tutorials/ha-RKE
@@ -96,6 +105,7 @@ pages-for-subheaders/use-windows-clusters, cluster-provisioning/rke-clusters/win
 how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/azure-storageclass-configuration, cluster-provisioning/rke-clusters/windows-clusters/azure-storageclass
 how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/windows-linux-cluster-feature-parity, cluster-provisioning/rke-clusters/windows-clusters/windows-parity
 how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/network-requirements-for-host-gateway, cluster-provisioning/rke-clusters/windows-clusters/host-gateway-requirements
+how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/use-windows-clusters/v2.1-v2.2, cluster-provisioning/rke-clusters/windows-clusters/docs-for-2.1-and-2.2
 pages-for-subheaders/set-up-cloud-providers, cluster-provisioning/rke-clusters/cloud-providers
 pages-for-subheaders/other-cloud-providers, tbd
 how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/launch-kubernetes-with-rancher/set-up-cloud-providers/other-cloud-providers/amazon, cluster-provisioning/rke-clusters/cloud-providers/amazon
@@ -134,10 +144,13 @@ pages-for-subheaders/backup-restore-and-disaster-recovery, backups
 how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher, backups/back-up-rancher
 how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher, backups/restoring-rancher
 how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-rancher-to-new-cluster, backups/migrating-rancher
-how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher, backups/docker-installs/docker-backups
-how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher, backups/docker-installs/docker-restores
-how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters, cluster-admin/backing-up-etcd
-how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup, cluster-admin/restoring-etcd
+how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher, backups/backup/docker-backups
+how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-k3s-installed-rancher, backups/backup/k3s-backups
+how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher, backups/restore/docker-restores
+ how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-k3s-installed-rancher, backups/restore/k3s-restore
+how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters, backups/backup/rke-backups
+how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup, backups/restore/rke-restore
+how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup/roll-back-to-v2.0-v2.1, backups/restore/rke-restore/v2.0-v2.1
 pages-for-subheaders/advanced-user-guides, tbd
 pages-for-subheaders/authentication-permissions-and-global-configuration, admin-settings
 pages-for-subheaders/about-authentication, admin-settings/authentication
@@ -254,7 +267,7 @@ reference-guides/rancher-manager-architecture/communicating-with-downstream-user
 reference-guides/rancher-manager-architecture/architecture-recommendations, overview/architecture-recommendations
 pages-for-subheaders/cluster-configuration, cluster-admin/editing-clusters
 pages-for-subheaders/rancher-server-configuration, tbd
-reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration, cluster-admin/editing-clusters/rke-config-reference
+reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration, cluster-provisioning/rke-clusters/options
 reference-guides/cluster-configuration/rancher-server-configuration/eks-cluster-configuration, cluster-admin/editing-clusters/eks-config-reference
 pages-for-subheaders/gke-cluster-configuration, cluster-admin/editing-clusters/gke-config-reference
 reference-guides/cluster-configuration/rancher-server-configuration/gke-cluster-configuration/gke-private-clusters, cluster-admin/editing-clusters/gke-config-reference/private-clusters
@@ -267,6 +280,11 @@ reference-guides/cluster-configuration/downstream-cluster-configuration/node-tem
 reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/digitalocean, cluster-provisioning/rke-clusters/node-pools/digital-ocean/do-node-template-config
 reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/azure, cluster-provisioning/rke-clusters/node-pools/azure/azure-node-template-config
 reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere, cluster-provisioning/rke-clusters/node-pools/vsphere/vsphere-node-template-config
+reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere/prior-to-v2.0.4, cluster-provisioning/rke-clusters/node-pools/vsphere/vsphere-node-template-config/prior-to-2.0.4
+reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere/v2.0.4, cluster-provisioning/rke-clusters/node-pools/vsphere/vsphere-node-template-config/v2.0.4
+reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere/v2.2.0, cluster-provisioning/rke-clusters/node-pools/vsphere/vsphere-node-template-config/v2.2.0
+reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere/v2.3.0, cluster-provisioning/rke-clusters/node-pools/vsphere/vsphere-node-template-config/v2.3.0
+reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere/v2.3.3, cluster-provisioning/rke-clusters/node-pools/vsphere/vsphere-node-template-config/v2.3.3
 pages-for-subheaders/single-node-rancher-in-docker, tbd
 reference-guides/single-node-rancher-in-docker/http-proxy-configuration, installation/other-installation-methods/single-node-docker/proxy
 reference-guides/single-node-rancher-in-docker/advanced-options, installation/other-installation-methods/single-node-docker/advanced
@@ -302,6 +320,8 @@ pages-for-subheaders/about-the-api, api
 reference-guides/about-the-api/api-tokens, api/api-tokens
 reference-guides/rancher-cluster-tools, cluster-admin/tools
 reference-guides/rancher-project-tools, project-admin/tools
+reference-guides/rancher-project-tools/project-alerts, project-admin/tools/project-alerts
+reference-guides/rancher-project-tools/project-logging, project-admin/tools/project-logging
 reference-guides/system-tools, system-tools
 reference-guides/rke1-template-example-yaml, admin-settings/rke-templates/example-yaml
 pages-for-subheaders/pipelines, pipelines
@@ -310,12 +330,14 @@ reference-guides/pipelines/pipeline-configuration, pipelines/config
 reference-guides/pipelines/configure-persistent-data, pipelines/storage
 reference-guides/pipelines/example-repositories, pipelines/example-repos
 reference-guides/pipelines/example-yaml, pipelines/example
+reference-guides/pipelines/v2.0.x, pipelines/docs-for-v2.0.x
 pages-for-subheaders/rancher-security, security
 pages-for-subheaders/selinux-rpm, security/selinux
 reference-guides/rancher-security/selinux-rpm/about-rancher-selinux, security/selinux
 reference-guides/rancher-security/selinux-rpm/about-rke2-selinux, security/selinux
 reference-guides/rancher-security/kubernetes-security-best-practices, security/best-practices
 reference-guides/rancher-security/security-advisories-and-cves, security/cve
+reference-guides/v1.6-migration/migration-tools-cli-reference, v1.6-migration/run-migration-tool/migration-tools-ref
 explanations, tbd
 pages-for-subheaders/integrations-in-rancher, tbd
 pages-for-subheaders/cis-scans, cluster-admin/tools/cis-scans

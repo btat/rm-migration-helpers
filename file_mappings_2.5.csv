@@ -389,3 +389,7 @@ reference-guides/rancher-security/rancher-v2.5-hardening-guides/self-assessment-
 reference-guides/rancher-security/rancher-v2.5-hardening-guides/self-assessment-guide-with-cis-v1.6-benchmark, security/rancher-2.5/1.6-benchmark-2.5
 reference-guides/rancher-security/rancher-v2.5-hardening-guides/hardening-guide-with-cis-v1.5-benchmark, security/rancher-2.5/1.5-hardening-2.5
 reference-guides/rancher-security/rancher-v2.5-hardening-guides/hardening-guide-with-cis-v1.6-benchmark, security/rancher-2.5/1.6-hardening-2.5
+pages-for-subheaders/install-rancher-on-linux, installation/other-installation-methods/install-rancher-on-linux
+getting-started/installation-and-upgrade/other-installation-methods/install-rancher-on-linux/roll-back-rancherd, installation/other-installation-methods/install-rancher-on-linux/rollbacks
+getting-started/installation-and-upgrade/other-installation-methods/install-rancher-on-linux/upgrade-rancherd, installation/other-installation-methods/install-rancher-on-linux/upgrades
+reference-guides/cluster-configuration/rancher-server-configuration/rancherd-configuration-reference, installation/other-installation-methods/install-rancher-on-linux/rancherd-configuration
