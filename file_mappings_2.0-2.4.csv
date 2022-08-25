@@ -5,8 +5,8 @@ pages-for-subheaders/introduction, tbd
 getting-started/introduction/overview, overview
 getting-started/introduction/what-are-divio-docs, tbd
 pages-for-subheaders/quick-start-guides, quick-start-guide
-pages-for-subheaders/rancher-manager-with-cli, quick-start-guide/cli
 pages-for-subheaders/deploy-rancher-manager, quick-start-guide/deployment
+getting-started/quick-start-guides/cli, quick-start-guide/cli
 getting-started/quick-start-guides/deploy-rancher-manager/aws, quick-start-guide/deployment/amazon-aws-qs
 getting-started/quick-start-guides/deploy-rancher-manager/azure, quick-start-guide/deployment/microsoft-azure-qs
 getting-started/quick-start-guides/deploy-rancher-manager/digitalocean, quick-start-guide/deployment/digital-ocean-qs
