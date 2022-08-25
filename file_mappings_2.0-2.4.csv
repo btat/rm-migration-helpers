@@ -64,7 +64,7 @@ getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/con
 how-to-guides, tbd
 pages-for-subheaders/new-user-guides, tbd
 pages-for-subheaders/kubernetes-cluster-setup, installation/resources/k8s-tutorials
-how-to-guides/new-user-guides/migrate-from-v1.6-v2.x, v1.6-migration
+pages-for-subheaders/migrate-from-v1.6-v2.x, v1.6-migration
 how-to-guides/new-user-guides/migrate-from-v1.6-v2.x/kubernetes-introduction, v1.6-migration/kub-intro
 how-to-guides/new-user-guides/migrate-from-v1.6-v2.x/install-and-configure-rancher, v1.6-migration/get-started
 how-to-guides/new-user-guides/migrate-from-v1.6-v2.x/migrate-services, v1.6-migration/run-migration-tool
@@ -147,7 +147,7 @@ how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/migrate-ranch
 how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher, backups/backup/docker-backups
 how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-k3s-installed-rancher, backups/backup/k3s-backups
 how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-docker-installed-rancher, backups/restore/docker-restores
- how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-k3s-installed-rancher, backups/restore/k3s-restore
+how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-k3s-installed-rancher, backups/restore/k3s-restore
 how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters, backups/backup/rke-backups
 how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup, backups/restore/rke-restore
 how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher-launched-kubernetes-clusters-from-backup/roll-back-to-v2.0-v2.1, backups/restore/rke-restore/v2.0-v2.1
@@ -279,7 +279,7 @@ pages-for-subheaders/node-template-configuration, tbd
 reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/amazon-ec2, cluster-provisioning/rke-clusters/node-pools/ec2/ec2-node-template-config
 reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/digitalocean, cluster-provisioning/rke-clusters/node-pools/digital-ocean/do-node-template-config
 reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/azure, cluster-provisioning/rke-clusters/node-pools/azure/azure-node-template-config
-reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere, cluster-provisioning/rke-clusters/node-pools/vsphere/vsphere-node-template-config
+pages-for-subheaders/creating-a-vsphere-cluster, cluster-provisioning/rke-clusters/node-pools/vsphere/vsphere-node-template-config
 reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere/prior-to-v2.0.4, cluster-provisioning/rke-clusters/node-pools/vsphere/vsphere-node-template-config/prior-to-2.0.4
 reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere/v2.0.4, cluster-provisioning/rke-clusters/node-pools/vsphere/vsphere-node-template-config/v2.0.4
 reference-guides/cluster-configuration/downstream-cluster-configuration/node-template-configuration/vsphere/v2.2.0, cluster-provisioning/rke-clusters/node-pools/vsphere/vsphere-node-template-config/v2.2.0
@@ -319,7 +319,7 @@ reference-guides/cli-with-rancher/kubectl-utility, cli
 pages-for-subheaders/about-the-api, api
 reference-guides/about-the-api/api-tokens, api/api-tokens
 reference-guides/rancher-cluster-tools, cluster-admin/tools
-reference-guides/rancher-project-tools, project-admin/tools
+pages-for-subheaders/project-tools, project-admin/tools
 reference-guides/rancher-project-tools/project-alerts, project-admin/tools/project-alerts
 reference-guides/rancher-project-tools/project-logging, project-admin/tools/project-logging
 reference-guides/system-tools, system-tools
@@ -365,14 +365,8 @@ explanations/integrations-in-rancher/cluster-monitoring/cluster-metrics, cluster
 explanations/integrations-in-rancher/cluster-monitoring/custom-metrics, cluster-admin/tools/cluster-monitoring/custom-metrics
 explanations/integrations-in-rancher/cluster-monitoring/expression, cluster-admin/tools/cluster-monitoring/expression
 explanations/integrations-in-rancher/cluster-monitoring/project-monitoring, cluster-admin/tools/cluster-monitoring/project-monitoring
-explanations/integrations-in-rancher/cluster-monitoring/prometheus , cluster-admin/tools/cluster-monitoring/prometheus
-explanations/integrations-in-rancher/cluster-monitoring/viewing-metrics , cluster-admin/tools/cluster-monitoring/viewing-metrics
-pages-for-subheaders/monitoring-and-alerting, monitoring-alerting
-explanations/integrations-in-rancher/monitoring-and-alerting/how-monitoring-works, monitoring-alerting/how-monitoring-works
-explanations/integrations-in-rancher/monitoring-and-alerting/rbac-for-monitoring, monitoring-alerting/rbac
-explanations/integrations-in-rancher/monitoring-and-alerting/built-in-dashboards, monitoring-alerting/dashboards
-explanations/integrations-in-rancher/monitoring-and-alerting/windows-support, monitoring-alerting/windows-clusters
-explanations/integrations-in-rancher/monitoring-and-alerting/promql-expressions, monitoring-alerting/expression
+explanations/integrations-in-rancher/cluster-monitoring/prometheus, cluster-admin/tools/cluster-monitoring/prometheus
+explanations/integrations-in-rancher/cluster-monitoring/viewing-metrics, cluster-admin/tools/cluster-monitoring/viewing-metrics
 explanations/integrations-in-rancher/opa-gatekeeper, cluster-admin/tools/opa-gatekeeper
 faq, faq
 faq/install-and-configure-kubectl, faq/kubectl
