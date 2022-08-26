@@ -139,6 +139,7 @@ pages-for-subheaders/helm-charts-in-rancher, helm-charts
 how-to-guides/new-user-guides/helm-charts-in-rancher/create-apps, helm-charts/creating-apps
 pages-for-subheaders/deploy-apps-across-clusters, deploy-across-clusters
 how-to-guides/new-user-guides/deploy-apps-across-clusters/fleet, deploy-across-clusters/fleet
+how-to-guides/new-user-guides/deploy-apps-across-clusters/multi-cluster-apps, deploy-across-clusters/multi-cluster-apps
 pages-for-subheaders/backup-restore-and-disaster-recovery, backups
 how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-rancher, backups/back-up-rancher
 how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/restore-rancher, backups/restoring-rancher
@@ -301,6 +302,11 @@ reference-guides/installation-references/tls-settings, installation/resources/tl
 reference-guides/installation-references/feature-flags, installation/resources/feature-flags
 pages-for-subheaders/amazon-eks-permissions, cluster-provisioning/hosted-kubernetes-clusters/eks
 reference-guides/amazon-eks-permissions/minimum-eks-permissions, cluster-provisioning/hosted-kubernetes-clusters/eks/permissions
+pages-for-subheaders/backup-restore-configuration, backups/configuration
+reference-guides/backup-restore-configuration/backup-configuration, backups/configuration/backup-config
+reference-guides/backup-restore-configuration/restore-configuration, backups/configuration/restore-config
+reference-guides/backup-restore-configuration/storage-configuration, backups/configuration/storage-config
+reference-guides/backup-restore-configuration/examples, backups/examples
 pages-for-subheaders/configure-openldap, admin-settings/authentication/openldap
 reference-guides/configure-openldap/openldap-config-reference, admin-settings/authentication/openldap/openldap-config
 reference-guides/kubernetes-concepts, overview/concepts
