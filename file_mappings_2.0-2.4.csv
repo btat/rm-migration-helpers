@@ -90,8 +90,8 @@ getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/hel
 getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/rke-add-on/api-auditing, installation/resources/advanced/helm2/rke-add-on/api-auditing
 pages-for-subheaders/helm2-rke-add-on-troubleshooting, installation/resources/advanced/helm2/rke-add-on/troubleshooting
 getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/rke-add-on/troubleshooting/generic-troubleshooting, installation/resources/advanced/helm2/rke-add-on/troubleshooting/generic-troubleshooting
-getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/rke-add-on/troubleshooting/job-complete-status, installation/resources/advanced/helm2/rke-add-on/job-complete-status
-getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/rke-add-on/troubleshooting/404-default-backend, installation/resources/advanced/helm2/rke-add-on/404-default-backend
+getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/rke-add-on/troubleshooting/job-complete-status, installation/resources/advanced/helm2/rke-add-on/troubleshooting/job-complete-status
+getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/rke-add-on/troubleshooting/404-default-backend, installation/resources/advanced/helm2/rke-add-on/troubleshooting/default-backend-404
 pages-for-subheaders/air-gap-helm2, installation/resources/advanced/air-gap-helm2
 getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/prepare-nodes, installation/resources/advanced/air-gap-helm2/prepare-nodes
 getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/populate-private-registry, installation/resources/advanced/air-gap-helm2/populate-private-registry
