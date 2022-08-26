@@ -176,7 +176,7 @@ how-to-guides/new-user-guides/helm-charts-in-rancher/managing-apps, helm-charts/
 how-to-guides/new-user-guides/helm-charts-in-rancher/multi-cluster-apps, helm-charts/multi-cluster-apps
 how-to-guides/new-user-guides/helm-charts-in-rancher/launching-apps, helm-charts/launching-apps
 how-to-guides/new-user-guides/helm-charts-in-rancher/tutorial, helm-charts/tutorial
-how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns helm-charts/globaldns
+how-to-guides/new-user-guides/helm-charts-in-rancher/globaldns, helm-charts/globaldns
 how-to-guides/new-user-guides/deploy-apps-across-clusters, deploy-across-clusters
 pages-for-subheaders/backup-restore-and-disaster-recovery, backups
 how-to-guides/new-user-guides/backup-restore-and-disaster-recovery/back-up-docker-installed-rancher, backups/backup/docker-backups
@@ -313,7 +313,7 @@ pages-for-subheaders/installation-references, tbd
 reference-guides/installation-references/helm-chart-options, installation/install-rancher-on-k8s/chart-options
 reference-guides/installation-references/tls-settings, installation/resources/tls-settings
 reference-guides/installation-references/feature-flags, installation/resources/feature-flags
-pages-for-subheaders/amazon-eks-permissions, cluster-provisioning/hosted-kubernetes-clusters/eks
+reference-guides/installation-references/amazon-eks-permissions, cluster-provisioning/hosted-kubernetes-clusters/eks
 pages-for-subheaders/configure-openldap, admin-settings/authentication/openldap
 reference-guides/configure-openldap/openldap-config-reference, admin-settings/authentication/openldap/openldap-config
 reference-guides/kubernetes-concepts, overview/concepts
