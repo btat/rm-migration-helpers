@@ -74,7 +74,7 @@ getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/hel
 getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/create-nodes-lb/nlb, installation/resources/advanced/helm2/create-nodes-lb/nlb
 pages-for-subheaders/helm2-kubernetes-rke, installation/resources/advanced/helm2/kubernetes-rke
 getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/kubernetes-rke/troubleshooting, installation/resources/advanced/helm2/kubernetes-rke/troubleshooting
-pages-for-subheaders/helm2-helm-init, installation/resources/advanced/helm2//helm-init
+pages-for-subheaders/helm2-helm-init, installation/resources/advanced/helm2/helm-init
 getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/helm-init/troubleshooting, installation/resources/advanced/helm2//helm-init/troubleshooting
 pages-for-subheaders/helm-rancher, installation/resources/advanced/helm2/helm-rancher
 getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/helm-rancher/tls-secrets, installation/resources/advanced/helm2/helm-rancher/tls-secrets
@@ -91,7 +91,7 @@ getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/hel
 pages-for-subheaders/helm2-rke-add-on-troubleshooting, installation/resources/advanced/helm2/rke-add-on/troubleshooting
 getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/rke-add-on/troubleshooting/generic-troubleshooting, installation/resources/advanced/helm2/rke-add-on/troubleshooting/generic-troubleshooting
 getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/rke-add-on/troubleshooting/job-complete-status, installation/resources/advanced/helm2/rke-add-on/troubleshooting/job-complete-status
-getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/rke-add-on/troubleshooting/404-default-backend, installation/resources/advanced/helm2/rke-add-on/troubleshooting/default-backend-404
+getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/helm2/rke-add-on/troubleshooting/404-default-backend, installation/resources/advanced/helm2/rke-add-on/troubleshooting/404-default-backend
 pages-for-subheaders/air-gap-helm2, installation/resources/advanced/air-gap-helm2
 getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/prepare-nodes, installation/resources/advanced/air-gap-helm2/prepare-nodes
 getting-started/installation-and-upgrade/advanced-options/advanced-use-cases/air-gap-helm2/populate-private-registry, installation/resources/advanced/air-gap-helm2/populate-private-registry
