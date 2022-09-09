@@ -89,7 +89,7 @@ BEGIN {
     %x[ find ./ -type f -exec sed -i "s/{{<baseurl>}}\\/rancher\\/#{version}\\/en\\///g" {} \\; ]
 
     # internal doc links: remove https://rancher.com/docs/rancher/v2.x/en prefix
-    %x[ find ./ -type f -exec sed -i "s/https\\.rancher\\.com\\/docs\\/rancher\\/#{version}\\/en\\///g" {} \\; ]
+    %x[ find ./ -type f -exec sed -i "s/https:\\/\\/rancher\\.com\\/docs\\/rancher\\/#{version}\\/en\\///g" {} \\; ]
 
     # img shortcodes e.g. {{< img "path" "alt text" >}}
     %x[ find ./ -type f -exec sed -i "s|{{< img \\"|![](|g" {} \\; ]
